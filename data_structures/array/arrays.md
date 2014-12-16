@@ -15,7 +15,6 @@ Since this data is just a list, if we wish to represent it within the context of
 
 ```ruby
 # my_friends.rb
-
 my_friends = [
   "Mark Campbell",
   "Stephen Markov",
@@ -63,7 +62,6 @@ For arrays, there are three places you might want to insert new data: at the beg
 
    ```js
    // array_insert.js
-
    Array.prototype.insert = function(newValue, index) {
      if (index > this.length) {
        return false;
@@ -88,6 +86,10 @@ For arrays, there are three places you might want to insert new data: at the beg
 
    How bad is this?  Not very, the worst case scenario is inserting a new value at the beginning of an array (which Ruby lets you do with `unshift`).  This will require the for loop to execute once for every value in the array at start, and thus algorithm time is a linear function of the initial input (the array).  
 
-3. Deleting  
+### Removing Data
 
-   Deleting is similar to inserting, in that if you want to remove from the end (for example, `pop`), it happens in constant time.  If you wish to delete from the start or middle and reassign indices to the values after the deleted one, it will be a linear time 
+Deleting is similar to inserting, in that if you want to remove from the end (for example, `pop`), it happens in constant time.  If you wish to delete from the start or middle and reassign indices to the values after the deleted one, it will be a linear time.
+
+## But what about Searching and Sorting?
+
+Things get a bit trickier here, and this document has already gotten a bit big, so let's jump into [Search and Sort](/data_structures/array/search_and_sort.md)
